@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 
     @GetMapping("/greeting")
-    @Timed(value = "my.greeting")
+    @Timed(value = "request.greeting")
     public String greeting() throws InterruptedException {
         // Sleep between 0s and 5s
         Thread.sleep((long) (Math.random() * 5000));
